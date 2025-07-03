@@ -2,7 +2,8 @@
 
 Welcome to the AI ChatBot project!
 
-Overview :
+**Overview** :
+
     - This project implements a Retrieval-Augmented Generation (RAG) chatbot using the following stack:
     - Faiss: For vector storage and semantic similarity search
     - FastAPI: Backend REST API for document ingestion and query handling
@@ -10,7 +11,7 @@ Overview :
     - Mistral Model: LLM used for generating responses
     - Streamlit: Interactive UI with real-time streaming
 
-📌 Features :
+**Features** :
 
 🔍 Semantic search using Faiss-based vector store
 ⚡ FastAPI backend to serve chat responses via API
@@ -19,7 +20,7 @@ Overview :
 🌐 Streamlit UI for user-friendly chat experience
 📄 Supports PDF document ingestion and RAG (Retrieval-Augmented Generation)
 
-Architecture & Flow :
+**Architecture & Flow** :
 
     | Document Loader | --->  | Chunk Splitter  | ---> | Embedding Generator| ---> |  Faiss Vector DB |
                                                                                             |
@@ -27,7 +28,7 @@ Architecture & Flow :
                 |  Streamlit (Frontend)  |    <---  | Mistral + RAG  |  <--- |  FastAPI (Query Handler) | 
                                                                                                    
 
-Project Directory :
+**Project Directory** :
 
     ├── AMLGO TEST/
     │         
@@ -46,7 +47,7 @@ Project Directory :
     ├── app.py
     ├── template.py
 
-🚀 Getting Started
+**Getting Started**
 
     1. Clone the repository ->  git clone https://github.com/VinayM573/Amlgo-Test.git
 
@@ -60,7 +61,8 @@ Project Directory :
 
     5. Run the Frontend (Streamlit) -> streamlit run template.py
 
-Configuration :
+**Configuration** :
+
     - PDF documents are ingested using PyPDFLoader
     - Embeddings generated using HuggingFaceBgeEmbeddings
     - Vector store is Faiss
@@ -68,7 +70,7 @@ Configuration :
     - LLM: Mistral (local or API-integrated)
 
 
-📚 Tech Stack :
+**Tech Stack** :
 
     | Layer      | Technology       |
     | ---------- | ---------------- |
@@ -79,7 +81,7 @@ Configuration :
     | Frontend   | Streamlit        |
     | Chunking   | NLTK / LangChain |
 
-## 📸 Preview
+**📸 Preview**
 
 ![Alt text](images/image.png)
 ![Alt text](images/image1.png)
