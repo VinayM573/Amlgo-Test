@@ -79,9 +79,7 @@ Configuration :
     | Frontend   | Streamlit        |
     | Chunking   | NLTK / LangChain |
 
-
-Clone the 
-
+## 📸 Preview
 
 ![Alt text](images/image.png)
 ![Alt text](images/image1.png)
