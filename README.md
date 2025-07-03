@@ -20,6 +20,7 @@ Overview :
 📄 Supports PDF document ingestion and RAG (Retrieval-Augmented Generation)
 
 Architecture & Flow :
+
     | Document Loader | --->  | Chunk Splitter  | ---> | Embedding Generator| ---> |  Faiss Vector DB |
                                                                                             |
                                                                                             v   
