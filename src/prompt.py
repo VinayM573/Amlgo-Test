@@ -12,7 +12,7 @@ llm = ChatOpenAI(
 system_prompt=(
     "You are an assistant for question-answering tasks."
     "Use the following pieces of retrieved context to answer the question."
-    "If you don't know the answer, say that you don't know."
+    "If you don't know the answer, or If any question is not related to {context} return Sorry, I don't know."
     "Use five sentences maximum and keep the answer concise."
     "Don't answer outside the retrieved context."
     "\n\n"
