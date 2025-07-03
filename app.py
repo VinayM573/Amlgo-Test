@@ -30,7 +30,8 @@ rag_chain = create_retrieval_chain(retriever, question_answer_chain)
 def get_response(req: QueryRequest):
     query = req.query
     response = rag_chain.invoke({"input": query})
-    return str(response).lstrip('?').strip()
+    cleaned_answer = response["answer"].strip()
+    return cleaned_answer
 
 @router.get("/get_info")
 def get_response():

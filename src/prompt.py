@@ -5,7 +5,7 @@ from langchain_core.prompts import ChatPromptTemplate
 llm = ChatOpenAI(
     model_name="mistral",
     openai_api_base="http://localhost:11434/v1",
-    openai_api_key="ollama"  # doesn't matter for Ollama
+    openai_api_key="ollama"
 )
 
 
