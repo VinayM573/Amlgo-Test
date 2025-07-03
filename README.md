@@ -48,15 +48,17 @@ Project Directory :
 
 🚀 Getting Started
 
-    1. pip install -r requirements.txt
+    1. Clone the repository ->  git clone https://github.com/VinayM573/Amlgo-Test.git
 
-    2. Running the Project Locally with Ollama
-        2.1 Download Ollama from -> https://ollama.com/download
-        2.2 Pull the Model -> ollama pull mistral
+    2. pip install -r requirements.txt
 
-    3. Run the Backend (FastAPI) -> uvicorn app:app --reload
+    3. Running the Project Locally with Ollama
+        3.1 Download Ollama from -> https://ollama.com/download
+        3.2 Pull the Model -> ollama pull mistral
 
-    4. Run the Frontend (Streamlit) -> streamlit run template.py
+    4. Run the Backend (FastAPI) -> uvicorn app:app --reload
+
+    5. Run the Frontend (Streamlit) -> streamlit run template.py
 
 Configuration :
     - PDF documents are ingested using PyPDFLoader
@@ -77,6 +79,8 @@ Configuration :
     | Frontend   | Streamlit        |
     | Chunking   | NLTK / LangChain |
 
+
+Clone the 
 
 
 ![Alt text](images/image.png)
