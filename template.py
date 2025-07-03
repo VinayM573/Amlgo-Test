@@ -46,12 +46,23 @@ if query:
         full_response = ""
 
         try:
-            with st.spinner("Waiting for response..."):
-                with httpx.stream("POST", API_URL, json={"query": query},timeout=300.0) as r:
-                    for chunk in r.iter_text():
+            spinner = st.spinner("Waiting for response...")
+            spinner.__enter__()  # manually start spinner
+            with httpx.stream("POST", API_URL, json={"query": query},timeout=300.0) as r:
+                stream = r.iter_text()
+                try:
+                    first_chunk = next(stream)  # Get first chunk
+                    full_response += first_chunk
+                    message_placeholder.markdown(full_response)
+                    spinner.__exit__(None, None, None)  # stop spinner after first token
+                except StopIteration:
+                    spinner.__exit__(None, None, None)  # no response, stop spinner
+                    st.warning("No response received.")
+                
+                for chunk in r.iter_text():
                         full_response += chunk
                         message_placeholder.markdown(full_response)
-
+                        spinner.__exit__(None, None, None)
             st.session_state.messages.append({"role": "assistant", "content": full_response})
 
             sources = r.headers.get("X-Sources")

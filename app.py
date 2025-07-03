@@ -5,9 +5,10 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from src.helper import hugging_face_embeddings,load_pdf_files,text_split
 from src.prompt import llm, prompt
 from vectordb.vectordb import load_vectorstore
-import nltk 
+import nltk
 from fastapi.responses import StreamingResponse
 from typing import Generator
+import time
 
 
 nltk.download('punkt') 
@@ -38,9 +39,9 @@ def get_response(req: QueryRequest):
     def stream_answer() -> Generator[str, None, None]:
         for word in cleaned_answer.split():  # You can split by char for finer tokens
             yield word + " "
+            time.sleep(0.05)
 
     return StreamingResponse(stream_answer(), media_type="text/plain")
-    return cleaned_answer
 
 @router.get("/get_info")
 def get_response():
