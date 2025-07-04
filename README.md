@@ -39,7 +39,7 @@ Welcome to the AI ChatBot project!
     │   └── vectordb.py          
     ├── src/
     │   └── helper.py
-    │    └── prompt.py         
+    │   └── prompt.py         
     ├── data/
     │   └── AI Training Document.pdf          
     ├── README.md
