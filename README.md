@@ -81,6 +81,13 @@ Welcome to the AI ChatBot project!
     | Frontend   | Streamlit        |
     | Chunking   | NLTK / LangChain |
 
+**Project Files on Google Drive**
+
+You can access the project files, reports, and assets from the link below:
+
+👉 [Click here to open Google Drive folder](https://drive.google.com/file/d/19lE7vWKKT-_IfYszDNt8a7GQplgoXx08/view?usp=sharing)
+
+
 **📸 Preview**
 
 ![Alt text](images/image.png)
